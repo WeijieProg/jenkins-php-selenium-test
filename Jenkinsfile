@@ -19,9 +19,6 @@ pipeline {
 							customWorkspace'/home/jenkins/agent'
 						}
 					}
-					environment {
-					   PATH = "/opt/maven:/bin"
-					}
 					steps {
 						sh 'mvn -B -DskipTests clean package'
 						sh 'mvn test'
